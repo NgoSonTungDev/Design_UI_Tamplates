@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơn_Tùng_Day_7</title>
+    <link rel="stylesheet" href="day7.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <p>STUNG</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">Phone</a></li>
+                    <li><a href="">SIM</a></li>
+                    <li><a href="">Cart</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="iformation">
+            <div class="over"></div>
+            <img src="images/mobile.png" alt="" class="mobi">
+            <div id="hieuung">
+                <div class="thongtin one">
+                    <img src="images/camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12Mp,wide anle lens</p>
+                    </div>
+                </div>
+                <div class="thongtin two">
+                    <img src="images/processor.png" alt="">
+                    <div>
+                        <h1>CHIP</h1>
+                        <p>Snapdragon 888</p>
+                    </div>
+                </div>
+                <div class="thongtin three">
+                    <img src="images/display.png" alt="">
+                    <div>
+                        <h1>display</h1>
+                        <p>6.5", supper amoled </p>
+                    </div>
+                </div>
+                <div class="thongtin four">
+                    <img src="images/battery.png" alt="">
+                    <div>
+                        <h1>PIN</h1>
+                        <p>6000mAh , sạc nhanh 30w</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="control">
+            <img src="images/arrow.png" alt="" id="up">
+            <h3>Features</h3>
+            <img src="images/arrow.png" alt="" id="dow">
+        </div>
+    </div>
+
+
+    <script>
+        var hieuung = document.getElementById("hieuung");
+        var up = document.getElementById("up");
+        var dow = document.getElementById("dow");
+        var rotatevalue = hieuung.style.transform;
+        var rotatesum;
+        up.onclick = function () {
+            rotatesum = rotatevalue + "rotate(-90deg)"
+            hieuung.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+
+        };
+        dow.onclick = function () {
+            rotatesum = rotatevalue + "rotate(90deg)"
+            hieuung.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+
+        };
+
+
+    </script>
+</body>
+
+</html>

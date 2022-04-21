@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơn_Tùng_Day_8</title>
+    <link rel="stylesheet" href="day8.css">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay loop play-inline id="plvideo" >
+            <source src="img/bg123.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="sidebar">
+            <div class="textbox">
+                <h1>LAMBOGHINI</h1>
+                <H4>RIAN</H4>
+                <div class="gach"></div>
+            </div>
+
+        </div>
+        <div class="content">
+            <h1>Sơn Tùng</h1>
+            <p>Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit. Numquam <br> iusto porro minus labore,
+                quae,
+                laudantium laborum at</p>
+            <div class="btn" id="playbtn">
+                <img src="img/play.png" alt="" id="icon">Play video
+            </div>
+        </div>
+        
+
+    </div>
+   
+
+    <script>
+        var plvideo =document.getElementById('plvideo');
+        var playbtn =document.getElementById('playbtn');
+        var icon =document.getElementById('icon');
+
+        playbtn.onclick=function(){
+            plvideo.style.display="block";
+            if(plvideo.paused){
+                plvideo.play();
+                icon.src = "img/pause.png";
+            }
+            else{
+                plvideo.pause();
+                icon.src = "img/play.png";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

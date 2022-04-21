@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tung</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section class="home" id="home">
+        <div class="swiper-container image-slider">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/shot-01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/shot-03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/shot-05.jpg" alt=""></div>
+            </div>
+            
+        </div>
+
+
+    </section>
+
+
+    <!-- script part  -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+
+        var swiper = new Swiper(".image-slider", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+
+    </script>
+
+
+</body>
+
+</html>

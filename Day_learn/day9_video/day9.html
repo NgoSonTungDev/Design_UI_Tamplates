@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day9.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Xem video</h1>
+        <div class="row">
+            <div class="col">
+                <div class="f_img">
+                    <img src="img/pic1.png" alt="" width="100%">
+                    <img src="img/play.png" alt="" class="play" onclick="btnplay('video/video.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small_row">
+                    <div class="smail_img">
+                        <img src="img/pic2.png" alt="">
+                        <img src="img/play.png" alt="" class="play" onclick="btnplay('video/video2.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse, debitis quo, quas nesciunt ex hic porro minus sint officia maxime! Minima </p>
+                </div>
+                <div class="small_row">
+                    <div class="smail_img">
+                        <img src="img/pic3.png" alt="">
+                        <img src="img/play.png" alt="" class="play" onclick="btnplay('video/video3.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse, debitis quo, quas nesciunt ex hic porro minus sint officia maxime! Minima </p>
+                </div><div class="small_row">
+                    <div class="smail_img">
+                        <img src="img/pic4.png" alt="">
+                        <img src="img/play.png" alt="" class="play" onclick="btnplay('video/video4.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse, debitis quo, quas nesciunt ex hic porro minus sint officia maxime! Minima </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="video" id="videoplay">
+        <video width="100%" controls autoplay id="myvideo">
+            <source src="video/video.mp4">
+        </video>
+        <img src="img/close.png" class="close" alt="" onclick="stopvideo()">
+    </div>
+
+
+    <script>
+        var videoplay = document.getElementById('videoplay');
+        var myvideo = document.getElementById('myvideo');
+        function stopvideo(){
+            videoplay.style.display='none';
+        }
+        function btnplay(file){
+            myvideo.src = file;
+            videoplay.style.display='block';
+        }
+    </script>
+
+
+</body>
+
+</html>

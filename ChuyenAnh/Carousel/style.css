@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #3afcbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 75%;
+    height: 70%;
+    box-shadow:  0 0 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.container img{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+.right-span{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0;
+}
+.right-span.active{
+    transform: 2s left;
+    animation: slide 1.5s linear 1;
+    left: -100%;
+    opacity: 1;
+}
+@keyframes slide{
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    75%{
+        width: 1500px;
+        height: 1500px;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+
+}
+.indicator {
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.indicator span{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.indicator span.active{
+    background-color: #000;
+    border: 3px solid #fff;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+.sec {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: #fba832;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 2.7em;
+  text-shadow: 1px 1px 1px #000, 1px 2px 1px #000, 1px 3px 1px #333,
+    1px 4px 1px #333, 1px 5px 1px #fff, 1px 6px 1px #fff,
+    1px 18px 6px rgba(0, 0, 0, 0.9), 1px 22px 10px rgba(0, 0, 0, 0.9),
+    1px 25px 35px rgba(0, 0, 0, 0.9), 1px 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 991px) {
+  .sec {
+    padding: 0 15px;
+  }
+  h1 {
+    font-size: 2em;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+  }
+  .text {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day8.css">
+</head>
+
+<body>
+    <div class="hero">
+        <button id="btn">
+            <p id="btntext">Submit</p>
+            <div class="chechbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
+        </button>
+    </div>
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        var btn2 = document.getElementById('btntext');
+
+        btn.onclick = function(){
+            if(btn.classList.toggle('active')){
+                btn2.innerHTML = 'Thank';
+                btn.classList.add('active')
+                
+            }else{
+                btn2.innerHTML = 'Submit';
+                btn.classList.remove('active')
+
+            }
+            
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
